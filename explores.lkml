@@ -1,4 +1,4 @@
-explore: events {
+explore: events_extension {
   extension: required
   join: users {
     type: left_outer
@@ -7,7 +7,7 @@ explore: events {
   }
 }
 
-explore: inventory_items {
+explore: inventory_items_extension {
   extension: required
   join: products {
     type: left_outer
@@ -23,7 +23,7 @@ explore: inventory_items {
   }
 }
 
-explore: order_items {
+explore: order_items_extension {
   extension: required
   join: users {
     type: left_outer
@@ -50,7 +50,7 @@ explore: order_items {
   }
 }
 
-explore: products {
+explore: products_extension{
   extension: required
   join: distribution_centers {
     type: left_outer
