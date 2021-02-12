@@ -4,7 +4,7 @@ include: "/ecomm_views/*.view.lkml"
 include: "/trip_views/*.view.lkml"
 
 #release1
-#verify
+#test
 
 explore: order_items {
   extends: [order_items]
