@@ -9,6 +9,10 @@ view: order_items {
     sql: ${TABLE}.id ;;
   }
 
+  dimension: model_name {
+    sql: cast({{_model._name}}as string) ;;
+  }
+
   dimension_group: created {
     type: time
     timeframes: [
