@@ -10,7 +10,7 @@ view: order_items {
   }
 
   dimension: model_name {
-    sql: {{_model._name}} ;;
+    sql: cast({{_model._name}}as string) ;;
   }
 
   dimension_group: created {
