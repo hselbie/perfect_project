@@ -6,13 +6,13 @@ include: "/trip_views/*.view.lkml"
 #release1
 #test
 
-# explore: order_items {
-#   extends: [order_items]
-# }
+explore: order_items {
+  extends: [order_items]
+}
 
-# explore: users {
-#   extends: [users]
-# }
+explore: users {
+  extends: [users]
+}
 
 
 ##testtestytesttest
