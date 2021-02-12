@@ -10,3 +10,4 @@ explore: order_items {
 explore: users {
   extends: [users]
 }
+##hugo
