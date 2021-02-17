@@ -2,7 +2,7 @@ view: order_items {
   sql_table_name: `looker-private-demo.ecomm.order_items`
     ;;
   drill_fields: [id]
-###test release1
+
   dimension: id {
     primary_key: yes
     type: number
@@ -11,6 +11,10 @@ view: order_items {
 
   dimension: model_name {
     sql: cast({{_model._name}}as string) ;;
+  }
+
+  dimension: release1 {
+    sql: 1 ;;
   }
 
   dimension_group: created {
