@@ -4,7 +4,7 @@ include: "/ecomm_views/*.view.lkml"
 include: "/trip_views/*.view.lkml"
 
 ###########
-#-- Release 3
+#-- Master Branch
 ###########
 
 explore: order_items {
