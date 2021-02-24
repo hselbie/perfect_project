@@ -5,7 +5,7 @@ include: "/trip_views/*.view.lkml"
 include: "/explores.lkml"
 
 ###########
-#-- Release 1 Branch
+#-- Master Branch
 ###########
 
 explore: order_items {
