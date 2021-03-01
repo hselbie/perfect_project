@@ -3,6 +3,14 @@ view: order_items {
     ;;
   drill_fields: [id]
 
+  parameter: test_dropdown {
+    suggestions: ["USD", "GBP"]
+  }
+
+  dimension: broken_content {
+    sql: "Fix your broken Content Please" ;;
+  }
+
   dimension: id {
     primary_key: yes
     type: number
