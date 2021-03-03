@@ -7,6 +7,10 @@ view: order_items {
     suggestions: ["USD", "GBP"]
   }
 
+  filter: dynamic_suggestion {
+    suggest_dimension: order_items_parameter_test.first_name
+  }
+
   dimension: broken_content {
     sql: "Fix your broken Content Please" ;;
   }

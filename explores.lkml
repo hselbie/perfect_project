@@ -48,6 +48,12 @@ explore: order_items_extension {
     sql_on: ${products.distribution_center_id} = ${distribution_centers.id} ;;
     relationship: many_to_one
   }
+
+  join: order_items_parameter_test {
+    type: left_outer
+    sql_on: ${order_items_parameter_test.first_name} = ${users.first_name} ;;
+    relationship: many_to_many
+  }
 }
 
 explore: products_extension{
