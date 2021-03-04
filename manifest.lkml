@@ -51,8 +51,6 @@ constant: lookml_navbar_helpchannel {
   </div>"
 }
 
-
-
 constant: button_start {
   value:   "<div style='@{text_align}
   @{display}
@@ -198,4 +196,9 @@ constant: large_money_postive_negative_format {
   {% elsif value <0 %}
   -${{ value | divided_by: -1.0 | round: 1 }}
   {% endif %}"
+}
+
+localization_settings: {
+  default_locale: en
+  localization_level: permissive
 }
