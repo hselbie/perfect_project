@@ -59,12 +59,14 @@ view: order_items {
   }
 
   dimension: inventory_item_id {
+    label: "release_1"
     type: number
     # hidden: yes
     sql: ${TABLE}.inventory_item_id ;;
   }
 
   dimension: order_id {
+    label: "order_id"
     type: number
     sql: ${TABLE}.order_id ;;
   }
