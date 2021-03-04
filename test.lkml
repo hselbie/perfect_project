@@ -4,7 +4,7 @@ test: model_name {
       }
 
       assert: test  {
-        expression: ${order_items.model_name} = "releaseone" ;;
+        expression: ${order_items.model_name} = "release_one" ;;
       }
 
 }
