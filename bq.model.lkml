@@ -5,7 +5,7 @@ include: "/trip_views/*.view.lkml"
 include: "/explores.lkml"
 
 ###########
-#-- Master Branch
+#-- Release V.3/8 2021
 ###########
 
 explore: order_items {
