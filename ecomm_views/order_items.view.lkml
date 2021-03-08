@@ -4,7 +4,7 @@ view: order_items {
   drill_fields: [id]
 
   parameter: test_dropdown {
-    suggestions: ["USD", "GBP"]
+    suggestions: ["USD", "GBP", "YEN", "FR"]
   }
 
   filter: dynamic_suggestion {
