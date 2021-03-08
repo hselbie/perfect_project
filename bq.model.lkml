@@ -11,3 +11,5 @@ include: "/explores.lkml"
 explore: order_items {
   extends: [order_items_extension]
 }
+
+## adding new features
