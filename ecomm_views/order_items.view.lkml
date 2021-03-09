@@ -3,12 +3,9 @@ view: order_items {
     ;;
   drill_fields: [id]
 
-  parameter: test_dropdown {
-    suggestions: ["USD", "GBP", "YEN", "FR"]
-  }
-
   filter: dynamic_suggestion {
-    suggest_dimension: order_items_parameter_test.first_name
+    suggest_explore: test_state_filter
+    suggest_dimension: test_state_filter.state
   }
 
   dimension: broken_content {
