@@ -6,7 +6,7 @@ include: "/explores.lkml"
 include: "/parameters.lkml"
 
 ###########
-#-- Master Branch
+#-- Release Branch 1
 ###########
 
 explore: order_items {
