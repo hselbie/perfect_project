@@ -17,10 +17,10 @@ explore: order_items {
 #     1=1
 
 #   {% endif %};;
-#   join: users {
-#     type: left_outer
-#     sql_on: ${users.id} = ${order_items.user_id} ;;
-#   }
+  join: users {
+    type: left_outer
+    sql_on: ${users.id} = ${order_items.user_id} ;;
+  }
 #   join: parameter {
 #     sql:  ;;
 #   }
