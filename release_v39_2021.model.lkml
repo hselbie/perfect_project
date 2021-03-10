@@ -26,6 +26,8 @@ explore: order_items {
 #   }
 }
 
+explore: foo_order_items {}
+
 explore: test_state_filter {
   join: parameter {
     sql:  ;;

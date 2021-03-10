@@ -135,3 +135,7 @@ view: order_items {
     ]
   }
 }
+
+view: foo_order_items {
+  extends: [order_items]
+}
