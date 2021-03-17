@@ -198,6 +198,10 @@ constant: large_money_postive_negative_format {
   {% endif %}"
 }
 
+constant: param {
+  value: "parameter: test {}"
+}
+
 localization_settings: {
   default_locale: en
   localization_level: permissive
