@@ -6,7 +6,7 @@ include: "/explores.lkml"
 include: "test.lkml"
 
 ###########
-#-- Master Branch
+#-- test
 ###########
 
 explore: order_items {
