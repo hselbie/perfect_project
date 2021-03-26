@@ -4,6 +4,7 @@ include: "/ecomm_views/*.view.lkml"
 include: "/trip_views/*.view.lkml"
 include: "/explores.lkml"
 include: "/parameters.lkml"
+include: "new.dashboard"
 
 ###########
 #-- Release Branch 1
