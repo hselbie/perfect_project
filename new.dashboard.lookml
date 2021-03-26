@@ -169,8 +169,6 @@
     type: single_value
     fields:
     - order_items.30_day_repeat_purchase_rate
-    filters:
-      users.country: "{{ _user_attributes['country'] }}"
     sorts:
     - repeat_purchase_facts.30_day_repeat_purchase_rate desc
     - order_items.30_day_repeat_purchase_rate desc
@@ -401,33 +399,3 @@
     col: 12
     width: 11
     height: 8
-  filters:
-  - name: Date
-    title: Date
-    type: date_filter
-    default_value: 90 days
-    allow_multiple_values: true
-    required: false
-  - name: State
-    title: State
-    type: field_filter
-    default_value: ''
-    allow_multiple_values: true
-    required: false
-    model: thelook
-    explore: order_items
-    listens_to_filters:
-    - Country
-    field: users.state
-  - name: City
-    title: City
-    type: field_filter
-    default_value: ''
-    allow_multiple_values: false
-    required: false
-    model: thelook
-    explore: order_items
-    listens_to_filters:
-    - State
-    - Country
-    field: users.city
