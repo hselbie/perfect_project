@@ -1,3 +1,5 @@
+
+### dimensions
 view: order_items {
   sql_table_name: `looker-private-demo.ecomm.order_items`
     ;;
@@ -113,16 +115,6 @@ view: order_items {
     sql: ${TABLE}.user_id ;;
   }
 
-  measure: total_revenue {
-    type: sum
-    sql: ${sale_price};;
-  }
-
-  measure: count {
-    type: count
-    drill_fields: [detail*]
-  }
-
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
@@ -136,6 +128,17 @@ view: order_items {
   }
 }
 
-view: foo_order_items {
-  extends: [order_items]
+
+
+### Measures
+view: +order_items {
+  measure: total_revenue {
+    type: sum
+    sql: ${sale_price};;
+  }
+
+  measure: count {
+    type: count
+    drill_fields: [detail*]
+  }
 }
