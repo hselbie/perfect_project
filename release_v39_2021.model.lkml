@@ -32,6 +32,8 @@ explore: inventory_items {
   }
 }
 
+explore: drivers {}
+
 explore: order_items {
   join: users {
     type: left_outer
