@@ -2,9 +2,9 @@ connection: "bq"
 
 include: "/ecomm_views/*.view.lkml"
 include: "/trip_views/*.view.lkml"
-include: "/explores.lkml"
-include: "/parameters.lkml"
-include: "new.dashboard"
+# include: "/explores.lkml"
+# include: "/parameters.lkml"
+# include: "new.dashboard"
 
 ###########
 #-- Release Branch 1
@@ -21,18 +21,20 @@ explore: order_items {
   join: users {
     type: left_outer
     sql_on: ${users.id} = ${order_items.user_id} ;;
+    relationship: many_to_one
   }
 #   join: parameter {
 #     sql:  ;;
 #   }
 }
 
-explore: foo_order_items {}
+explore: inventory_items {}
 
-explore: test_state_filter {
-  join: parameter {
-    sql:  ;;
-}
-}
+# explore: test_state_filter {
+#   join: parameter {
+#     sql:  ;;
+# }
+# }
 
 ## adding new features
+explore: drivers {}
