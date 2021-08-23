@@ -1,5 +1,5 @@
 view: users {
-  sql_table_name:`looker-private-demo.ecomm.users
+  sql_table_name:`looker-private-demo.ecomm.users`
     ;;
   drill_fields: [id]
 

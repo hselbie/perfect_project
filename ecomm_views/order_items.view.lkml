@@ -1,7 +1,7 @@
 
 ### dimensions
 view: order_items {
-  sql_table_name: looker-private-demo.ecomm.order_items
+  sql_table_name: `looker-private-demo.ecomm.order_items`
     ;;
   drill_fields: [id]
 
