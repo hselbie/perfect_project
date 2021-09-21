@@ -12,7 +12,7 @@ access_grant: sensi_data {
 ###########
 #-- Release Branch 1
 ###########
-
+explore: new_drivers {}
 explore: events {
   join: users {
     type: left_outer

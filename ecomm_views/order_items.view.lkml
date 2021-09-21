@@ -30,6 +30,7 @@ view: order_items {
   }
 
   dimension_group: created {
+    required_access_grants: [sensi_data]
     type: time
     timeframes: [
       raw,
