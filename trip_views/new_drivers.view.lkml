@@ -1,10 +1,24 @@
 view: new_drivers {
   derived_table: {
-    sql: select * from ${drivers.SQL_TABLE_NAME} ;;
+    sql: select * from ${order_items.SQL_TABLE_NAME} ;;
   }
 
   dimension: id {
     sql: ${TABLE}.id ;;
+  }
+
+  dimension_group: created {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.created_at ;;
   }
   # # You can specify the table name if it's different from the view name:
   # sql_table_name: my_schema_name.tester ;;
