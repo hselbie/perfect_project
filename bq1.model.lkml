@@ -2,9 +2,12 @@ connection: "bq"
 
 include: "/ecomm_views/*.view.lkml"
 include: "/trip_views/*.view.lkml"
-# include: "/explores.lkml"
-# include: "/parameters.lkml"
-# include: "new.dashboard"
+include: "//hub_proj/*.view.lkml"
+
+access_grant: sensi_data {
+  allowed_values: ["yes"]
+  user_attribute: senstive_data_access
+}
 
 ###########
 #-- Release Branch 1
