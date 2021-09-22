@@ -13,7 +13,7 @@ view: +order_items_imported {
         quarter,
         year
       ]
-      sql: ${TABLE}.created_at ;;
+      sql: ${TABLE}.hugo ;;
     }
   # # You can specify the table name if it's different from the view name:
   # sql_table_name: my_schema_name.tester ;;
