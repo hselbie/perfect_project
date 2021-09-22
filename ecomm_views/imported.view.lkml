@@ -2,7 +2,6 @@ include: "//hub_proj/order_items_imported.view.lkml"
 view: +order_items_imported {
 
     dimension_group: created {
-      required_access_grants: [sensi_data]
       type: time
       timeframes: [
         raw,
