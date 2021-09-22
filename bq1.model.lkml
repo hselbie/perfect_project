@@ -9,6 +9,8 @@ access_grant: sensi_data {
   user_attribute: senstive_data_access
 }
 
+explore: order_items_imported {}
+
 ###########
 #-- Release Branch 1
 ###########
