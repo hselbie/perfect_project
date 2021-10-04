@@ -1,5 +1,5 @@
-include: "//hub_proj/order_items_imported.view.lkml"
-view: +order_items_imported {
+include: "//hub_proj/views/order_items.view.lkml"
+view: +order_items_hub {
 
     dimension_group: created {
       type: time

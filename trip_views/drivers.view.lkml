@@ -4,14 +4,12 @@ view: drivers {
   drill_fields: [id]
 
   dimension: id {
-    required_access_grants: [sensi_data]
     primary_key: yes
     type: string
     sql: ${TABLE}.id ;;
   }
 
   dimension_group: birth {
-    required_access_grants: [sensi_data]
     type: time
     timeframes: [
       raw,

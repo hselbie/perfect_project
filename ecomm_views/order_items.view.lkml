@@ -26,12 +26,10 @@ view: order_items {
   }
 
   dimension: release1 {
-    required_access_grants: [sensi_data]
     sql: 1 ;;
   }
 
   dimension_group: created {
-    required_access_grants: [sensi_data]
     type: time
     timeframes: [
       raw,

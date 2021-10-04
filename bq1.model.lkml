@@ -2,14 +2,8 @@ connection: "bq"
 
 include: "/ecomm_views/*.view.lkml"
 include: "/trip_views/*.view.lkml"
-include: "//hub_proj/*.view.lkml"
+include: "//hub_proj/views/*.view.lkml"
 
-access_grant: sensi_data {
-  allowed_values: ["yes"]
-  user_attribute: senstive_data_access
-}
-
-explore: order_items_imported {}
 
 ###########
 #-- Release Branch 1
