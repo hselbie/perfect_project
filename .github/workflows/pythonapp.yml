@@ -38,7 +38,8 @@ jobs:
         pip install lmanage
     - name: Run Lmanage_Configurator
       run: |
-        cat ${{ github.workspace }}/bq1.model.lkml
+        lmanage configurator -yp ${{ github.workspace }}/instance_config/fullinstance.yaml
+
 
 #   build_38:
 #     runs-on: ubuntu-latest
