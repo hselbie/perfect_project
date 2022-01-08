@@ -36,7 +36,6 @@ jobs:
     - name: Install dependencies
       run: |
         pip install lmanage
-        pip install .
     - name: Run Lmanage_Configurator
       run: |
         cat ${{ github.workspace }}/repo/bq1.model.lkml
