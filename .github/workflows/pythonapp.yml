@@ -17,10 +17,10 @@ name: python_application
 on:
   push:
     branches:
-      - main 
+      - master 
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   build_37:
