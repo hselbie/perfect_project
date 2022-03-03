@@ -4,10 +4,6 @@ include: "/ecomm_views/*.view.lkml"
 include: "/trip_views/*.view.lkml"
 # include: "//hub_proj/views/*.view.lkml"
 
-access_grant: can_view_sensitive_data {
-  user_attribute: can_view_sensitive_data
-  allowed_values: ["Yes"]
-}
 
 ###########
 #-- Release Branch 1
@@ -38,10 +34,6 @@ explore: inventory_items {
 explore: drivers {}
 
 explore: order_items {
-  access_filter: {
-    user_attribute: country
-    field: users.country
-  }
   join: users {
     type: left_outer
     sql_on: ${order_items.user_id} = ${users.id} ;;

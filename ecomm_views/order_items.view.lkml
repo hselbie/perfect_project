@@ -268,7 +268,6 @@ view: order_items {
   }
 
   dimension: gross_margin {
-    required_access_grants: [can_view_sensitive_data]
     label: "Gross Margin"
     type: number
     value_format_name: usd
