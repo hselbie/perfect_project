@@ -21,6 +21,7 @@ view: order_items {
   }
 
   dimension: user_id {
+    required_access_grants: [can_see_dau]
     label: "User Id"
     type: number
     hidden: yes
