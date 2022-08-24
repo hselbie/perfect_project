@@ -1,6 +1,5 @@
 view: events {
-  sql_table_name: `looker-private-demo.ecomm.events`
-    ;;
+  sql_table_name: `looker-private-demo.ecomm.events` ;;
   drill_fields: [id]
 
   dimension: id {
