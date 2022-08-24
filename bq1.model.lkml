@@ -17,6 +17,11 @@ explore: snap_rollup {}
 ###########
 explore: new_drivers {}
 explore: events {
+  access_filter: {
+    user_attribute: id
+    field: users.first_name
+  }
+
   join: users {
     type: left_outer
     sql_on: ${events.user_id} = ${users.id} ;;

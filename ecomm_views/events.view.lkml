@@ -4,6 +4,7 @@ view: events {
   drill_fields: [id]
 
   dimension: id {
+    required_access_grants: [can_see_dau]
     primary_key: yes
     type: number
     sql: ${TABLE}.id ;;
@@ -114,5 +115,6 @@ view: events {
   measure: count {
     type: count
     drill_fields: [id, ad_events.id, users.last_name, users.id, users.first_name]
+    filters: [zip: "95060"]
   }
 }

@@ -142,3 +142,7 @@ view: example_dt {
     ]
   }
 }
+
+view: frankie {
+  sql_table_name: afad ;;
+}

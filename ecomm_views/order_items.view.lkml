@@ -24,7 +24,7 @@ view: order_items {
     required_access_grants: [can_see_dau]
     label: "User Id"
     type: number
-    hidden: yes
+    # hidden: yes
     sql: ${TABLE}.user_id ;;
   }
 
