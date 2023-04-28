@@ -2,15 +2,7 @@ connection: "bq"
 
 include: "/ecomm_views/*.view.lkml"
 include: "/trip_views/*.view.lkml"
-include: "snap.view.lkml"
 # include: "//hub_proj/views/*.view.lkml"
-
-access_grant: can_see_dau {
-  user_attribute: can_see_sharky
-  allowed_values: ["Yes"]
-}
-
-explore: snap_rollup {}
 
 ###########
 #-- Release Branch 1

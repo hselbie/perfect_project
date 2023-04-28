@@ -4,7 +4,6 @@ view: events {
   drill_fields: [id]
 
   dimension: id {
-    required_access_grants: [can_see_dau]
     primary_key: yes
     type: number
     sql: ${TABLE}.id ;;
