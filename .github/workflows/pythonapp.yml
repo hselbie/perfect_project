@@ -12,53 +12,42 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-name: python_application
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: Looker Validation Suite
 
 on:
   push:
-    branches:
-      - master 
+    branches: [ main ]
   pull_request:
-    branches:
-      - master
+    branches: [ main ]
 
 jobs:
-  build_37:
-
+  build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Set up Python 3.7
-      uses: actions/setup-python@v1
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v2
       with:
-        python-version: 3.7
+        python-version: "3.8"
     - name: Install dependencies
       run: |
-        pip install lmanage
-    - name: Run Lmanage_Configurator
+        python -m pip install --upgrade pip
+        pip install lmanage 
+    # Run Looker Instance Configuratory  
+    - name: Run LManage Configurator
+      env:
+        LOOKERSDK_API_VERSION: ${{ secrets.LOOKERSDK_API_VERSION }}
+        LOOKERSDK_BASE_URL: ${{ secrets.LOOKERSDK_BASE_URL }}
+        LOOKERSDK_CLIENT_ID: ${{ secrets.LOOKERSDK_CLIENT_ID }}
+        LOOKERSDK_CLIENT_SECRET: ${{ secrets.LOOKERSDK_CLIENT_SECRET }}
       run: |
-        lmanage configurator -yp ${{ github.workspace }}/instance_config/fullinstance.yaml
+        cd .github
+        echo ${{ github.head_ref }}
+        echo ${{ github.event.push.ref }}
+        lmanage configurator  -yp ${{ github.workspace }}/instance_configuration/dev_output.yaml
 
-
-#   build_38:
-#     runs-on: ubuntu-latest
-
-#     steps:
-#     - uses: actions/checkout@v1
-#     - name: Set up Python 3.8
-#       uses: actions/setup-python@v1
-#       with:
-#         python-version: 3.8
-#     - name: Install dependencies
-#       run: |
-#     - name: Lint with flake8
-#       run: |
-#         # stop the build if there are Python syntax errors or undefined names
-#         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-#         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-#         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-#     - name: Run Lmanage_Configurator
-#       run: |
-#         cat ${{ github.workspace }}/repo/bq1.model.lkml
 
